@@ -65,9 +65,6 @@ buttons1.forEach(button => {
 });     
 
 
-// Başlanğıcda convertedValueL dəyərini boş saxlayırıq
-
-// convertedValueL sahəsində dəyişiklik olduqda hesablama başlayır
 convertedValueL.addEventListener('input', function() {
     valyutaLeft();
 });
@@ -88,8 +85,6 @@ function valyutaLeft() {
                     pText.textContent = `1 ${fromCurrency} = ${data.result} ${toCurrency}`;
 
                     let convertedAmount = (data.result * parseFloat(convertedValueL.value)).toFixed(5);
-
-                    // NaN yoxlamaq üçün
                     if (!isNaN(convertedAmount)) {
                         convertedValueR.value = convertedAmount;
                         console.log("Hesablanmış sağ dəyər:", convertedValueR.value);
@@ -134,7 +129,6 @@ function valyutaRight() {
     
                         let convertedAmount = (data.result * parseFloat(convertedValueR.value)).toFixed(5);
     
-                        // NaN yoxlamaq üçün
                         if (!isNaN(convertedAmount)) {
                             convertedValueL.value = convertedAmount;
                             console.log("Hesablanmış sağ dəyər:", convertedValueL.value);

@@ -94,6 +94,7 @@ button{
   }
   .right{
     margin-right: 10px;
+    width: 0px;
   }
   .size{
     font-size: 14px;
