@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Valyuta</title>
+</head>
+<body>
+    <header> 
+        <img src="./Frame.svg">
+        <div class="blog-text">
+            <h1 class="colorBlack">БАНК</h1>
+            <h1 class="colorGray">БИЗНЕС</h1>
+            <h1 class="colorGray">ИНВЕСТИЦИИ</h1>
+            <h1 class="colorGray">СТРАХОВАНИЕ</h1>
+            <h1 class="colorGray">МОБАЙЛ</h1>
+            <h1 class="colorGray">ПУТЕШЕСТВИЯ</h1>
+            <h1 class="colorGray">РАЗВЛЕЧЕНИЯ</h1>
+        </div>
+            <div class="end">
+            <button><h1 class="text">ВОЙТИ</h1></button>
+            <img src="./hamburger_menu-512.webp" alt="hamburger-menu icon" class="hamburger-icon">
+            </div>
+        </header>
+    <selection>
+        <div class="error-container">
+            <p class="error clicked" style="display: none">This site can't be reached!</p>
+                <img src="./errorimg.png" class="errorimg clicked">
+        </div>
+        <h1 class="header-text">Конвертер валют онлайн</h1>
+    </selection>
+    <div class="container"> 
+            <div class="right">
+                <p class="colorGray size">У меня есть </p>
+                <div class="currency-selector">
+                    <button class="value selected">RUB</button>
+                    <button class="value">USD</button>
+                    <button class="value">EUR</button>
+                    <button class="value">GBP</button>
+                </div>
+            <div class="input-number-left">
+                <input type="text" class="input-value-left">
+                <p class="currencyConversion"></p>
+            </div>
+        </div>
+        <div class="right">
+            <p class="colorGray size">Хочу приобрести</p>
+            <div class="currency-selector">
+                <button class="value1">RUB</button>
+                <button class="value1 selected">USD</button>
+                <button class="value1">EUR</button>
+                <button class="value1">GBP</button>
+            </div>
+            <div class="input-number-left">
+                <input type="text" class="input-value-right">
+                <p class="currencyConversionR"></p>
+            </div>
+        </div>
+    </div> 
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- Telefon 320-991
+Tablet 992-1279
+Kompüter 1280-1400(Kompüterdə maxsimumda olmasa olar) -->
