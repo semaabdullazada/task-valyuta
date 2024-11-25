@@ -10,14 +10,13 @@ const blogText1 = document.querySelectorAll(".colorGray");
 const blogText2 = document.querySelectorAll(".colorBlack");  
 const header = document.querySelector("header");
 const leftButton = document.querySelector(".end");
-const leftButtonText = document.querySelector(".text");
 const errorText = document.querySelector(".error");
 const errorImg = document.querySelector(".errorimg");
 const inputt = document.querySelector("input");
 const heaaderText = document.querySelector(".header-text");
 const selectedValue = document.querySelector(".selected");
 const errorContain = document.querySelector(".error-container");
-access_key = "270cc634810157b7d1405f0b8892bcb8";
+access_key = "1105d5b21c161ae6eef73aab9143ef3a";
 let selectedLeft="RUB"; 
 
 
@@ -37,16 +36,12 @@ forHamburger.addEventListener("click", () => {
     if (isMenuVisible) {
         header.style.display = "block";
         blogText.style.display = "none";
-        leftButton.style.marginTop = "-39px"; 
         // leftButton.style.marginLeft = "500px";
-        paddingRight="90px";
         forHamburger.style.display = "block"; 
         isMenuVisible = false; 
     } else {
         header.style.display = "block";
         blogText.style.display = "block";
-        leftButton.style.marginRight = "110px"; 
-        leftButton.style.marginLeft = "-80px";
         forHamburger.style.display = "block";
         isMenuVisible = true; 
     }
@@ -95,14 +90,16 @@ function valyutaLeft() {
                 } else {
                     console.log("API düzgün nəticə qaytarmadı.");
                 }
+                errorText.style.display = "none";
+                errorImg.style.display = "none";
+                errorContain.classList.add("dis-none");
             })
             .catch(err => console.log("Xəta:", err));
-            errorText.style.display = "block";
-            errorImg.style.display = "block";
+            // errorText.style.display = "block";
+            // errorImg.style.display = "block";
             
             heaaderText.style.paddingTop = "20px";
             heaaderText.style.paddingTop = "20px";
-            // errorText.yle.display = "block";
 
             if (selectedLeft.textContent === selectedRight.textContent) {
                 convertedValueR.value = convertedValueL.value;
@@ -139,23 +136,24 @@ function valyutaRight() {
                     } else {
                         console.log("API düzgün nəticə qaytarmadı.");
                     }
+                    errorImg.style.display = "none";
+                    errorText.style.display = "none";
+ 
                 }) 
 
-
             .catch(err => console.log("Xəta:", err));
-            errorText.style.display = "block";
-            errorImg.style.display = "block";
+            // errorText.style.display = "block";
+            // errorImg.style.display = "block";
             
             heaaderText.style.paddingTop = "20px";
             heaaderText.style.paddingTop = "20px";
-            errorImg.style.display = "block";
-            errorText.style.display = "block";
+            errorContain.classList.remove("dis-none");
             if (selectedRight.textContent === selectedLeft.textContent) {
                 convertedValueL.value = convertedValueR.value;
             } 
-            // else {
-            //     convertedValueL.value = "";
-            // }
+            else {
+                convertedValueL.value = "";
+            }
             // console.error("Xəta baş verdi:", error);
     } else {
         console.log("Hər iki valyuta seçilməlidir.");
